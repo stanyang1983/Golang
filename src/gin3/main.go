@@ -1,6 +1,7 @@
 package main
 
 import (
+	"gin3/database"
 	"gin3/src"
 
 	"github.com/gin-gonic/gin"
@@ -24,6 +25,11 @@ func main() {
 	// 		"id": id,
 	// 	})
 	// })
+
+	go func() {
+		database.DB()
+	}()
+
 	router.Run(":8000")
 }
 
