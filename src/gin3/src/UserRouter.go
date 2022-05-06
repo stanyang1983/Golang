@@ -12,8 +12,7 @@ func AddUserRouter(r *gin.RouterGroup) {
 	user.GET("/", service.FindAllUser)
 	user.GET("/:id", service.FindByUserId)
 	user.POST("/", service.PostUser)
-	//delete 刪除
+	user.POST("/more", service.CreateUserList)
 	user.DELETE("/:id", service.DeleteUser)
-	//put 更改
-	user.PUT("/:id", service.PutUser)
+	user.PUT("/:id", service.UpdateUser)
 }

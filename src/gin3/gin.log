@@ -1,0 +1,17 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /v1/users/                --> gin3/service.FindAllUser (3 handlers)
+[GIN-debug] GET    /v1/users/:id             --> gin3/service.FindByUserId (3 handlers)
+[GIN-debug] POST   /v1/users/                --> gin3/service.PostUser (3 handlers)
+[GIN-debug] DELETE /v1/users/:id             --> gin3/service.DeleteUser (3 handlers)
+[GIN-debug] PUT    /v1/users/:id             --> gin3/service.UpdateUser (3 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8000
+[GIN] 2022/05/06 - 14:49:56 | 200 |       779.4µs |       127.0.0.1 | GET      "/v1/users/"
+[GIN] 2022/05/06 - 15:08:19 | 200 |       505.7µs |       127.0.0.1 | GET      "/v1/users/"
+[GIN] 2022/05/06 - 15:08:43 | 200 |      1.6749ms |       127.0.0.1 | GET      "/v1/users/2"
